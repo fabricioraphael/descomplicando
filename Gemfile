@@ -4,7 +4,6 @@ gem 'rails', '3.2.2'
 gem "bundler", "~> 1.2.1"
 
 gem "pg", 						 "~> 0.11.0"
-gem 'sqlite3'
 
 gem 'jquery-rails'
 gem 'ruby-json'
