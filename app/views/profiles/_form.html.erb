@@ -1,0 +1,43 @@
+<center>
+<h2><%= titulo %></h2>
+
+<%= form_for @profile, :url => {:action => action_name}, :id => :new_profile do |p| %>
+	<table>
+		<tr>
+	  	<td><%= p.label "#{:name} *"  %></td>
+	  	<td><%= p.text_field :name %></td>
+		</tr>
+		<tr>
+			<td><%= p.label :birthday %></td>
+			<% unless params[:profile].nil? %>
+	 			<td><%= p.text_field :birthday, :size => 11, :id => "birthday", :value => 	
+						apresenta_data_formatada(params[:profile][:birthday],@profile.birthday)%></td>
+			<% else %>
+	 			<td><%= p.text_field :birthday, :size => 11, :id => "birthday", :value => apresenta_data_formatada("", @profile.birthday)%></td>			
+			<% end %>
+		</tr>
+		<tr>
+	  	<td><%= p.label :address %></td>
+	  	<td><%= p.text_field :address %></td>
+		</tr>
+		<tr>
+	  	<td><%= p.label :phone %></td>
+	  	<td><%= p.text_field :phone,  :size => 11, :id => "telefone" %></td>
+		</tr>
+		<tr>
+	  	<td><%= p.label :works_at %></td>
+	  	<td><%= p.text_field :works_at %></td>
+		</tr>
+		<tr>
+	  	<td><%= p.label :site %></td>
+	  	<td><%= p.text_field :site %></td>
+		</tr>
+		<tr>
+	  	<td><%= p.label :bio %></td>
+	  	<td><%= p.text_area :bio %></td>
+		</tr>
+		<tr>
+	  	<td> </td><td><%= p.submit submit_name %></td>
+	</table>
+<% end %>
+</center>

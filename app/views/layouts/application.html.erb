@@ -23,13 +23,18 @@
 	          <li><%= link_to "" %></li>
 	          <li><%= link_to "Contact", contacts_path %></li>
 	          <li><%= link_to "Log-in" %></li>
+	          <li><%= link_to "Register", new_user_path %></li>
 	          <li><a style="margin-top:0px; padding:2px 0 0;">Search <span style="margin:10px;"><input id="search" type="text" value=""></span></a></li>
+						<% if user_signed_in? and not current_user.profile.blank? %>
+	          <li><a style="margin-left: 30px;"> Olá <%= current_user.profile.name.titlecase %></a></li>
+						<% end %>
 	        </ul>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 	
+	<% if user_signed_in? %>
 	<div class="container">
 	  <div class="row">
 	    <div class="span9"><%= yield %></div>
@@ -48,6 +53,9 @@
 	    </div>
 	  </div>
 	</div>
+	<% else %>
+		<center><%= yield %></center>
+	<% end %>
 
 
 </body>

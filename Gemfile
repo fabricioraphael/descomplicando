@@ -13,6 +13,8 @@ gem "jasmine", "~> 1.2.1"
 gem "jasmine-jquery-rails", "~> 1.4.2"
 gem 'sass-rails',   '~> 3.2.3'
 
+gem "devise", "~> 2.1.2"
+
 gem 'uglifier', '>= 1.0.3'
 
 gem 'twitter-bootstrap-rails'
