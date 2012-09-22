@@ -7,8 +7,48 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="navbar navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </a>
+				<%= link_to "Descomplicando", root_path, :class => 'brand' %>
+	      <div class="nav-collapse">
+	        <ul class="nav">
+	          <li><%= link_to "" %></li>
+	          <li><%= link_to "" %></li>
+	          <li><%= link_to "" %></li>
+	          <li><%= link_to "Contact", contacts_path %></li>
+	          <li><%= link_to "Log-in" %></li>
+	          <li><a style="margin-top:0px; padding:2px 0 0;">Search <span style="margin:10px;"><input id="search" type="text" value=""></span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="container">
+	  <div class="row">
+	    <div class="span9"><%= yield %></div>
+	    <div class="span3">
+	      <h2>About Us</h2>
+	      <p>
+					Tentaremos aqui, descomplicar, desmitificar as mais diverças tecnologia.
+					Não assuste se você encontrar aqui algo como: "Descomplicando: Fritando um ovo direto na placa mãe" ou até mesmo algo do tipo: 
+					"Descomplicando: Programando um microcontrolador", os assuntos serão diversos e as forças inabaláveis.
+		 		</p>
+				<p>
+					Meu nome é Fabrício (vulgo Faber), não gosto de titulos nem classificações, acho que elas só servem pra te limitar e vou tentar
+					mostrar a vocês (e quem sabe ensinar), algumas coisas legais. 
+					De cara posso adiantar assuntos como: Ruby, Ruby on Rails, Java, JavaScript, Git e muito mais...
+				</p>
+	    </div>
+	  </div>
+	</div>
 
-<%= yield %>
 
 </body>
 </html>
